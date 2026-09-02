@@ -10,7 +10,7 @@ export const SITE = {
     description: 'Portfolio of Rhico: multimedia design, digital and traditional art, and development work.',
     author: 'Rhico',
     email: 'rhico.potgieter@proton.me',
-    url: 'https://rhico.website',
+    url: 'https://rhico.co.za',
     locale: 'en',
     socials: [
         { label: 'Instagram', href: 'https://www.instagram.com/h0lloh/' },
@@ -32,5 +32,7 @@ export const NAV_ITEMS = [
 
 /**
  * Origins allowed to call the api. Extend when a preview/staging domain is added.
+ * holloh.co.za is intentionally absent — it only 301-redirects to rhico.co.za,
+ * so the api never receives requests from that origin.
  */
-export const ALLOWED_ORIGINS = ['http://localhost:5173', 'https://rhico.website', 'https://www.rhico.website'];
+export const ALLOWED_ORIGINS = ['http://localhost:5173', 'https://rhico.co.za', 'https://www.rhico.co.za'];
