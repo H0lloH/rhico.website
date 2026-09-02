@@ -1,0 +1,17 @@
+# Normalise line endings — store and check out LF everywhere.
+* text=auto eol=lf
+
+# Binary assets — never touch.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.avif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.pdf binary
+
+# Lockfile — treat as generated in diffs.
+pnpm-lock.yaml linguist-generated=true -diff

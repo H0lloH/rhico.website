@@ -1,0 +1,25 @@
+{
+    "name": "@rhico/api",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "main": "./src/app.js",
+    "exports": {
+        ".": "./src/app.js"
+    },
+    "scripts": {
+        "dev": "node --watch --env-file=.env src/server.js",
+        "start": "node src/server.js",
+        "lint": "oxlint"
+    },
+    "dependencies": {
+        "@hono/node-server": "^2.1.1",
+        "@rhico/shared": "workspace:*",
+        "hono": "^4.13.5",
+        "resend": "^6.25.0",
+        "zod": "^4.5.4"
+    },
+    "devDependencies": {
+        "oxlint": "^1.79.0"
+    }
+}

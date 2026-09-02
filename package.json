@@ -1,0 +1,26 @@
+{
+    "name": "rhico-website",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "packageManager": "pnpm@10.33.2",
+    "engines": {
+        "node": ">=20"
+    },
+    "scripts": {
+        "dev": "pnpm --filter web dev",
+        "dev:api": "pnpm --filter @rhico/api dev",
+        "dev:all": "pnpm --parallel --filter web --filter @rhico/api dev",
+        "build": "pnpm --filter web build",
+        "preview": "pnpm --filter web preview",
+        "lint": "pnpm --filter \"./apps/*\" lint",
+        "format": "prettier --write \"**/*.{js,jsx,json,css,md}\""
+    },
+    "dependencies": {
+        "@rhico/api": "workspace:*",
+        "hono": "^4.13.5"
+    },
+    "devDependencies": {
+        "prettier": "^3.4.2"
+    }
+}
