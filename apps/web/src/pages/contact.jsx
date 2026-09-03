@@ -81,7 +81,7 @@ export default function Contact() {
 
                         {status === 'error' && <p className="text-sm text-red-500">{error_message || 'Something went wrong. Please try again.'}</p>}
 
-                        <button type="submit" disabled={is_submitting} className="self-start rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90 disabled:opacity-50">
+                        <button type="submit" disabled={is_submitting} className="self-start rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-stone-900 transition-opacity hover:opacity-90 disabled:opacity-50">
                             {is_submitting ? 'Sending…' : 'Send message'}
                         </button>
                     </form>

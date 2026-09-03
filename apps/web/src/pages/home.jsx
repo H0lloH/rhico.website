@@ -42,7 +42,7 @@ export default function Home() {
                 </motion.p>
 
                 <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.18 }} className="flex flex-wrap gap-3 pt-2">
-                    <Link to="/design" className="rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90">
+                    <Link to="/design" className="rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-stone-900 transition-opacity hover:opacity-90">
                         View work
                     </Link>
                     <Link to="/contact" className="rounded-md border border-line px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-accent">
