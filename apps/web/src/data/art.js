@@ -9,7 +9,10 @@
  *
  * `images` holds one entry per viewable version of the piece (colour,
  * greyscale, etc). The gallery uses images[0] as the tile thumbnail and
- * lets the lightbox toggle between all of them via `label`.
+ * lets the lightbox toggle between all of them via `label` when more than
+ * one is present. The greyscale versions of the two digital portraits are
+ * intentionally not listed here — they're featured on the Home page
+ * instead (see apps/web/src/pages/home.jsx).
  */
 const ART_PIECES = [
     {
@@ -23,16 +26,8 @@ const ART_PIECES = [
         for_sale: false,
         images: [
             {
-                label: 'Colour',
                 thumb: '/images/art/digital/portrait-i-thumb.webp',
                 image: '/images/art/digital/portrait-i.webp',
-                width: 1415,
-                height: 2000
-            },
-            {
-                label: 'Greyscale',
-                thumb: '/images/art/digital/portrait-i-mono-thumb.webp',
-                image: '/images/art/digital/portrait-i-mono.webp',
                 width: 1415,
                 height: 2000
             }
@@ -49,16 +44,8 @@ const ART_PIECES = [
         for_sale: false,
         images: [
             {
-                label: 'Colour',
                 thumb: '/images/art/digital/portrait-ii-thumb.webp',
                 image: '/images/art/digital/portrait-ii.webp',
-                width: 1415,
-                height: 2000
-            },
-            {
-                label: 'Greyscale',
-                thumb: '/images/art/digital/portrait-ii-mono-thumb.webp',
-                image: '/images/art/digital/portrait-ii-mono.webp',
                 width: 1415,
                 height: 2000
             }

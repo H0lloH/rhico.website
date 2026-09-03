@@ -7,6 +7,23 @@ import Page from '../components/ui/page.jsx';
 
 const CARDS = NAV_ITEMS.filter((item) => item.key !== 'contact');
 
+const FEATURED_PORTRAITS = [
+    {
+        slug: 'portrait-i-mono',
+        title: 'Portrait Study I — Greyscale',
+        thumb: '/images/art/digital/portrait-i-mono-thumb.webp',
+        width: 637,
+        height: 900
+    },
+    {
+        slug: 'portrait-ii-mono',
+        title: 'Portrait Study II — Greyscale',
+        thumb: '/images/art/digital/portrait-ii-mono-thumb.webp',
+        width: 637,
+        height: 900
+    }
+];
+
 export default function Home() {
     // Render
     return (
@@ -32,6 +49,26 @@ export default function Home() {
                         Get in touch
                     </Link>
                 </motion.div>
+            </section>
+
+            <section className="border-t border-line pt-16">
+                <p className="mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-accent">Featured</p>
+                <div className="grid grid-cols-2 gap-5">
+                    {FEATURED_PORTRAITS.map((portrait, index) => (
+                        <motion.div key={portrait.slug} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.08 }}>
+                            <Link to="/art" className="group block overflow-hidden rounded-xl border border-line bg-surface">
+                                <img
+                                    src={portrait.thumb}
+                                    alt={portrait.title}
+                                    loading="lazy"
+                                    width={portrait.width}
+                                    height={portrait.height}
+                                    className="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                                />
+                            </Link>
+                        </motion.div>
+                    ))}
+                </div>
             </section>
 
             <section className="grid grid-cols-1 gap-5 border-t border-line pt-16 sm:grid-cols-3">
