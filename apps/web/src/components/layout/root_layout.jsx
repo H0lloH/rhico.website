@@ -6,6 +6,7 @@ import SiteNav from './site_nav.jsx';
 import SiteFooter from './site_footer.jsx';
 
 import Home from '../../pages/home.jsx';
+import About from '../../pages/about.jsx';
 import Design from '../../pages/design.jsx';
 import Art from '../../pages/art.jsx';
 import Code from '../../pages/code.jsx';
@@ -34,6 +35,7 @@ export default function RootLayout() {
                 <AnimatePresence mode="wait" initial={false}>
                     <Routes location={location} key={location.pathname}>
                         <Route index element={<Home />} />
+                        <Route path="about" element={<About />} />
                         <Route path="design" element={<Design />} />
                         <Route path="art" element={<Art />} />
                         <Route path="code" element={<Code />} />

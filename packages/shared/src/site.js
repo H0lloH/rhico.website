@@ -24,6 +24,7 @@ export const SITE = {
  * Primary navigation. `path` values map 1:1 to router routes in the web app.
  */
 export const NAV_ITEMS = [
+    { key: 'about', label: 'About', path: '/about', blurb: 'Background, experience, and skills.' },
     { key: 'design', label: 'Design', path: '/design', blurb: 'Multimedia and graphic design work.' },
     { key: 'art', label: 'Art', path: '/art', blurb: 'Digital and traditional art.' },
     { key: 'code', label: 'Code', path: '/code', blurb: 'Development and creative-coding projects.' },

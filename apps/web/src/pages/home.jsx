@@ -5,7 +5,7 @@ import { NAV_ITEMS } from '@rhico/shared';
 
 import Page from '../components/ui/page.jsx';
 
-const CARDS = NAV_ITEMS.filter((item) => item.key !== 'contact');
+const CARDS = NAV_ITEMS.filter((item) => item.key !== 'contact' && item.key !== 'about');
 
 const FEATURED_PORTRAITS = [
     {
